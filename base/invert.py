@@ -17,6 +17,7 @@ def parse_args():
   parser.add_argument('--description', type=str, default='he is old',
                       help='The description.')
   parser.add_argument('--image_path', type=str, default='examples/142.jpg', help='Path of images to invert.')
+  parser.add_argument('--out_path', type=str)
   parser.add_argument('-o', '--output_dir', type=str, default='',
                       help='Directory to save the results. If not specified, '
                            '`./results/inversion/test` '
@@ -70,7 +71,7 @@ def main():
   if args.mode == 'man':
     image_name = os.path.splitext(os.path.basename(args.image_path))[0]
   else:
-    image_name = 'gen'
+    image_name = args.out_path
   save_image(f'{output_dir}/{image_name}_ori.png', viz_results[0])
   save_image(f'{output_dir}/{image_name}_enc.png', viz_results[1])
   save_image(f'{output_dir}/{image_name}_inv.png', viz_results[-1])
