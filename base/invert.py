@@ -16,7 +16,7 @@ def parse_args():
                       default='man', help='Mode (gen for generation, man for manipulation).')
   parser.add_argument('--description', type=str, default='he is old',
                       help='The description.')
-  parser.add_argument('--image_path', type=str, default='examples/142.jpg', help='Path of images to invert.')
+  parser.add_argument('--image_path', type=str, default='examples/n.jpg', help='Path of images to invert.')
   parser.add_argument('--out_path', type=str)
   parser.add_argument('-o', '--output_dir', type=str, default='',
                       help='Directory to save the results. If not specified, '
